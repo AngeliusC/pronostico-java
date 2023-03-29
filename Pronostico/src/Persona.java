@@ -1,9 +1,3 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Persona {
 
 	private int id;
@@ -16,22 +10,6 @@ public class Persona {
 		this.nombre = nombre;
 		this.apellido = apellido;
 	}
-	public static List<Persona> leerPersonas(String archivo) throws IOException {
-        List<String> lineas = Files.readAllLines(Paths.get(archivo));
-        List<Persona> personas = new ArrayList<>();
-
-        for (String linea : lineas) {
-            String[] partes = linea.split(" ");
-            int id = Integer.parseInt(partes[0].trim());
-            String nombre = partes[1].trim();
-            String apellido = partes[2].trim();
-
-            Persona persona = new Persona(id, nombre, apellido);
-            personas.add(persona);
-        }
-
-        return personas;
-    }
 	
 	public int getId() {
 	    return id;
