@@ -6,10 +6,7 @@ public class Pronostico {
 	private int ganaEquipo1;
 	private int empate;
 	private int ganaEquipo2;
-	
-	public Pronostico() {
 
-	}
 	public Pronostico(Equipo equipo1, Equipo equipo2, int ganaEquipo1, int empate, int ganaEquipo2) {
 
 		this.equipo1 = equipo1;
@@ -48,5 +45,4 @@ public class Pronostico {
 	public void setGanaEquipo2(int ganaEquipo2) {
 		this.ganaEquipo2 = ganaEquipo2;
 	}
-	
 }
